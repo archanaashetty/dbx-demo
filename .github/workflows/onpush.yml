@@ -43,7 +43,7 @@ jobs:
 
       - name: Workflow deployment (assets only upload)
         run: |
-          dbx deploy cicd-demo-project-sample-etl --assets-only
+          dbx deploy cicd-demo-project-sample-etl
 
       - name: Run the workflow in a jobless fashion
         run: |
