@@ -47,6 +47,6 @@ jobs:
 
       - name: Run integration test
         run: |
-          dbx launch cicd-demo-project-sample-etl --from-assets --trace
+          dbx launch cicd-demo-project-sample-etl
 
 
