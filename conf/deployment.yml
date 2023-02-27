@@ -56,16 +56,3 @@ environments:
               package_name: "cicd_demo_project"
               entry_point: "ml"
               parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
-          ###############################################################################
-          # this is an example task based on the notebook                               #
-          # Please note that first you'll need to add a Repo and commit notebook to it. #
-          ###############################################################################
-          - task_key: "notebook"
-            deployment_config:
-              no_package: true # we omit using package since code will be shipped directly from the Repo
-            depends_on:
-              - task_key: "ml"
-            job_cluster_key: "default"
-            notebook_task:
-              notebook_path: "/Repos/stijn.uijen@databricks.com/dbx-demo/notebooks/sample_notebook"
-
