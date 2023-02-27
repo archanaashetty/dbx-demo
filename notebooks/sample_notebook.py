@@ -22,7 +22,7 @@
 
 # COMMAND ----------
 
-from cicd_demo_project.tasks.sample_ml_task import SampleMLTask
+from cicd_demo_project.conf.tasks.sample_ml_task import SampleMLTask
 
 pipeline = SampleMLTask.get_pipeline()
 print(pipeline)

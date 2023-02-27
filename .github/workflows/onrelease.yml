@@ -3,7 +3,7 @@ name: Release pipeline
 on:
   push:
     branches:
-      - '**'
+      - 'main'
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
@@ -39,7 +39,7 @@ jobs:
 
       - name: Deploy the workflow as a job
         run: |
-          dbx deploy cicd-demo-project-sample-etl
+          dbx deploy cicd-demo-project-sample-multitask
 
       - name: Create Release
         id: create_release

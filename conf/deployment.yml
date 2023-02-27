@@ -67,5 +67,5 @@ environments:
               - task_key: "ml"
             job_cluster_key: "default"
             notebook_task:
-              notebook_path: "/Repos/Staging/cicd_demo_project/notebooks/sample_notebook"
+              notebook_path: "/Repos/stijn.uijen@databricks.com/dbx-demo/notebooks/sample_notebook"
 
