@@ -20,10 +20,10 @@ jobs:
       DATABRICKS_TOKEN:  ${{ secrets.DATABRICKS_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Set up Python 3.9
-        uses: actions/setup-python@v1.1
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9'
           cache: 'pip' # caching pip dependencies
@@ -43,7 +43,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1.1
+        uses: actions/create-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions
         with:
