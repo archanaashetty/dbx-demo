@@ -56,3 +56,6 @@ environments:
               package_name: "cicd_demo_project"
               entry_point: "ml"
               parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
+
+
+              #test
