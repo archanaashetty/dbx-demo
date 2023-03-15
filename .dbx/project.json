@@ -3,17 +3,17 @@
         "dev": {
             "profile": "cicd-demo-profile",
             "workspace_dir": "/Shared/dbx/cicd_demo_project/dev",
-            "artifact_location": "dbfs:/Shared/dbx/cicd_demo_project/dev"
+            "artifact_location": "dbfs:/Shared/dbx/mlops_demo_project/dev"
         },
         "staging": {
             "profile": "cicd-demo-profile",
             "workspace_dir": "/Shared/dbx/cicd_demo_project/staging",
-            "artifact_location": "dbfs:/Shared/dbx/cicd_demo_project/staging"
+            "artifact_location": "dbfs:/Shared/dbx/mlops_demo_project/staging"
         },
         "prod": {
             "profile": "cicd-demo-profile",
             "workspace_dir": "/Shared/dbx/cicd_demo_project/prod",
-            "artifact_location": "dbfs:/Shared/dbx/cicd_demo_project/prod"
+            "artifact_location": "dbfs:/Shared/dbx/mlops_demo_project/prod"
         }
     }
 }
