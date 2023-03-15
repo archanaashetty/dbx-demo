@@ -1,15 +1,19 @@
 {
     "environments": {
-        "default": {
+        "dev": {
             "profile": "cicd-demo-profile",
-            "storage_type": "mlflow",
-            "properties": {
-                "workspace_directory": "/Shared/dbx/cicd_demo_project",
-                "artifact_location": "dbfs:/Shared/dbx/projects/cicd_demo_project"
-            }
+            "workspace_dir": "/Shared/dbx/cicd_demo_project/dev",
+            "artifact_location": "dbfs:/Shared/dbx/cicd_demo_project/dev"
+        },
+        "staging": {
+            "profile": "cicd-demo-profile",
+            "workspace_dir": "/Shared/dbx/cicd_demo_project/staging",
+            "artifact_location": "dbfs:/Shared/dbx/cicd_demo_project/staging"
+        },
+        "prod": {
+            "profile": "cicd-demo-profile",
+            "workspace_dir": "/Shared/dbx/cicd_demo_project/prod",
+            "artifact_location": "dbfs:/Shared/dbx/cicd_demo_project/prod"
         }
-    },
-    "inplace_jinja_support": false,
-    "failsafe_cluster_reuse_with_assets": true,
-    "context_based_upload_for_execute": false
+    }
 }
