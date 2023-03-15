@@ -132,7 +132,7 @@ environments:
       #############################################################
       - name: "cicd-demo-project-sample-multitask"
         job_clusters:
-          - job_cluster_key: "default"
+          - job_cluster_key: "staging"
             <<: *basic-static-cluster
         tasks:
           - task_key: "etl"
