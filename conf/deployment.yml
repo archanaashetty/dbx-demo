@@ -57,7 +57,7 @@ environments:
               entry_point: "ml"
               parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
 
-  prod:
+  staging:
     workflows:
       #######################################################################################
       #   Example workflow for integration tests                                            #
@@ -103,7 +103,7 @@ environments:
               entry_point: "ml"
               parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
 
-  development:
+  prod:
     workflows:
       #######################################################################################
       #   Example workflow for integration tests                                            #
