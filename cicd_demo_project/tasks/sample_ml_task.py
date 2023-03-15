@@ -1,7 +1,7 @@
 from cicd_demo_project.common import Task
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 import pandas as pd
@@ -23,7 +23,7 @@ class SampleMLTask(Task):
     def get_pipeline() -> Pipeline:
         pipeline = Pipeline([
             ("scaler", StandardScaler()),
-            ('random_forest', RandomForestRegressor())
+            ('linear_regression', LinearRegression())
         ])
         return pipeline
 
