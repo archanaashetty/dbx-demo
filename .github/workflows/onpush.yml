@@ -43,10 +43,10 @@ jobs:
 
       - name: Deploy integration test
         run: |
-          dbx deploy cicd-demo-project-sample-multitask --assets-only
+          dbx deploy cicd-demo-project-sample-multitask --environment=staging --assets-only
 
       - name: Run integration test
         run: |
-          dbx launch cicd-demo-project-sample-multitask --from-assets --trace
+          dbx launch cicd-demo-project-sample-multitask --environment=staging --from-assets --trace
 
 
