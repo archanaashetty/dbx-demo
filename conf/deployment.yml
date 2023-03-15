@@ -11,7 +11,7 @@ custom:
       node_type_id: "m5d.large"
 
 environments:
-  dev:
+  default:
     workflows:
       #######################################################################################
       #   Example workflow for integration tests                                            #
@@ -57,94 +57,5 @@ environments:
               entry_point: "ml"
               parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
 
-  staging:
-    workflows:
-      #######################################################################################
-      #   Example workflow for integration tests                                            #
-      #######################################################################################
-      - name: "cicd-demo-project-sample-tests"
-        tasks:
-          - task_key: "main"
-            <<: *basic-static-cluster
-            spark_python_task:
-                python_file: "file://tests/entrypoint.py"
-                # this call supports all standard pytest arguments
-                parameters: ["file:fuse://tests/integration", "--cov=cicd_demo_project"]
-      #######################################################################################
-      # this is an example job with single ETL task based on 2.1 API and wheel_task format #
-      ######################################################################################
-      - name: "cicd-demo-project-sample-etl"
-        tasks:
-          - task_key: "main"
-            <<: *basic-static-cluster
-            python_wheel_task:
-              package_name: "cicd_demo_project"
-              entry_point: "etl" # take a look at the setup.py entry_points section for details on how to define an entrypoint
-              parameters: ["--conf-file", "file:fuse://conf/tasks/sample_etl_config.yml"]
-      #############################################################
-      # this is an example multitask job with notebook task       #
-      #############################################################
-      - name: "cicd-demo-project-sample-multitask"
-        job_clusters:
-          - job_cluster_key: "default"
-            <<: *basic-static-cluster
-        tasks:
-          - task_key: "etl"
-            job_cluster_key: "default"
-            spark_python_task:
-              python_file: "file://cicd_demo_project/tasks/sample_etl_task.py"
-              parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_etl_config.yml" ]
-          - task_key: "ml"
-            depends_on:
-              - task_key: "etl"
-            job_cluster_key: "default"
-            python_wheel_task:
-              package_name: "cicd_demo_project"
-              entry_point: "ml"
-              parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
 
-  prod:
-    workflows:
-      #######################################################################################
-      #   Example workflow for integration tests                                            #
-      #######################################################################################
-      - name: "cicd-demo-project-sample-tests"
-        tasks:
-          - task_key: "main"
-            <<: *basic-static-cluster
-            spark_python_task:
-                python_file: "file://tests/entrypoint.py"
-                # this call supports all standard pytest arguments
-                parameters: ["file:fuse://tests/integration", "--cov=cicd_demo_project"]
-      #######################################################################################
-      # this is an example job with single ETL task based on 2.1 API and wheel_task format #
-      ######################################################################################
-      - name: "cicd-demo-project-sample-etl"
-        tasks:
-          - task_key: "main"
-            <<: *basic-static-cluster
-            python_wheel_task:
-              package_name: "cicd_demo_project"
-              entry_point: "etl" # take a look at the setup.py entry_points section for details on how to define an entrypoint
-              parameters: ["--conf-file", "file:fuse://conf/tasks/sample_etl_config.yml"]
-      #############################################################
-      # this is an example multitask job with notebook task       #
-      #############################################################
-      - name: "cicd-demo-project-sample-multitask"
-        job_clusters:
-          - job_cluster_key: "staging"
-            <<: *basic-static-cluster
-        tasks:
-          - task_key: "etl"
-            job_cluster_key: "staging"
-            spark_python_task:
-              python_file: "file://cicd_demo_project/tasks/sample_etl_task.py"
-              parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_etl_config.yml" ]
-          - task_key: "ml"
-            depends_on:
-              - task_key: "etl"
-            job_cluster_key: "staging"
-            python_wheel_task:
-              package_name: "cicd_demo_project"
-              entry_point: "ml"
-              parameters: [ "--conf-file", "file:fuse://conf/tasks/sample_ml_config.yml" ]
+              #test
