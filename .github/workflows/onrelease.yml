@@ -39,7 +39,7 @@ jobs:
 
       - name: Deploy the workflow as a job
         run: |
-          dbx deploy cicd-demo-project-sample-multitask --environment=prod
+          dbx deploy PROD-cicd-demo-project-sample-multitask --environment=prod
 
       - name: Create Release
         id: create_release
