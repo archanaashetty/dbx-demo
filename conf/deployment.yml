@@ -16,7 +16,7 @@ environments:
       #######################################################################################
       #   Example workflow for integration tests                                            #
       #######################################################################################
-      - name: "cicd-demo-project-sample-tests"
+      - name: "DEV-cicd-demo-project-sample-tests"
         tasks:
           - task_key: "main"
             <<: *basic-static-cluster
@@ -27,7 +27,7 @@ environments:
       #######################################################################################
       # this is an example job with single ETL task based on 2.1 API and wheel_task format #
       ######################################################################################
-      - name: "cicd-demo-project-sample-etl"
+      - name: "DEV-cicd-demo-project-sample-etl"
         tasks:
           - task_key: "main"
             <<: *basic-static-cluster
@@ -38,7 +38,7 @@ environments:
       #############################################################
       # this is an example multitask job with notebook task       #
       #############################################################
-      - name: "cicd-demo-project-sample-multitask"
+      - name: "DEV-cicd-demo-project-sample-multitask"
         job_clusters:
           - job_cluster_key: "default"
             <<: *basic-static-cluster
@@ -61,7 +61,7 @@ environments:
       #######################################################################################
       #   Example workflow for integration tests                                            #
       #######################################################################################
-      - name: "cicd-demo-project-sample-tests"
+      - name: "STAGING-cicd-demo-project-sample-tests"
         tasks:
           - task_key: "main"
             <<: *basic-static-cluster
@@ -72,7 +72,7 @@ environments:
       #######################################################################################
       # this is an example job with single ETL task based on 2.1 API and wheel_task format #
       ######################################################################################
-      - name: "cicd-demo-project-sample-etl"
+      - name: "STAGING-cicd-demo-project-sample-etl"
         tasks:
           - task_key: "main"
             <<: *basic-static-cluster
@@ -83,7 +83,7 @@ environments:
       #############################################################
       # this is an example multitask job with notebook task       #
       #############################################################
-      - name: "cicd-demo-project-sample-multitask"
+      - name: "STAGING-cicd-demo-project-sample-multitask"
         job_clusters:
           - job_cluster_key: "default"
             <<: *basic-static-cluster
@@ -106,7 +106,7 @@ environments:
       #######################################################################################
       #   Example workflow for integration tests                                            #
       #######################################################################################
-      - name: "cicd-demo-project-sample-tests"
+      - name: "PROD-cicd-demo-project-sample-tests"
         tasks:
           - task_key: "main"
             <<: *basic-static-cluster
@@ -117,7 +117,7 @@ environments:
       #######################################################################################
       # this is an example job with single ETL task based on 2.1 API and wheel_task format #
       ######################################################################################
-      - name: "cicd-demo-project-sample-etl"
+      - name: "PROD-cicd-demo-project-sample-etl"
         tasks:
           - task_key: "main"
             <<: *basic-static-cluster
@@ -128,7 +128,7 @@ environments:
       #############################################################
       # this is an example multitask job with notebook task       #
       #############################################################
-      - name: "cicd-demo-project-sample-multitask"
+      - name: "PROD-cicd-demo-project-sample-multitask"
         job_clusters:
           - job_cluster_key: "default"
             <<: *basic-static-cluster
