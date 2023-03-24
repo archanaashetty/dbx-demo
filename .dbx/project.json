@@ -1,14 +1,31 @@
 {
     "environments": {
-        "default": {
+        "dev": {
             "profile": "cicd-demo-profile",
             "storage_type": "mlflow",
             "properties": {
-                "workspace_directory": "/Shared/dbx/cicd_demo_project",
-                "artifact_location": "dbfs:/Shared/dbx/projects/cicd_demo_project"
+                "workspace_directory": "/Shared/cicd_demo/dev/dbx/cicd_demo_dev",
+                "artifact_location": "dbfs:/Shared/cicd_demo/dev/dbx/projects/cicd_demos_dbx_dev"
+            }
+        },
+        "staging": {
+            "profile": "cicd-demo-profile",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/cicd_demo/staging/dbx/cicd_demo_staging",
+                "artifact_location": "dbfs:/Shared/cicd_demo/staging/dbx/projects/cicd_demos_dbx_staging"
+            }
+        },
+        "prod": {
+            "profile": "cicd-demo-profile",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/cicd_demo/prod/dbx/cicd_demo_prod",
+                "artifact_location": "dbfs:/Shared/cicd_demo/prod/dbx/projects/cicd_demos_dbx_prod"
             }
         }
     },
+    
     "inplace_jinja_support": false,
     "failsafe_cluster_reuse_with_assets": true,
     "context_based_upload_for_execute": false
