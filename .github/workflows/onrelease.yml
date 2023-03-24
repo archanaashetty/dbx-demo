@@ -41,6 +41,10 @@ jobs:
         run: |
           dbx deploy PROD-cicd-demo-project-sample-multitask --environment=prod
 
+      - name: Rn the deployed workflow
+        run: |
+          dbx launch PROD-cicd-demo-project-sample-multitask --from-assets --trace --environment=prod
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
