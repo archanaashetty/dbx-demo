@@ -26,3 +26,5 @@ def entrypoint():  # pragma: no cover
 # if you're using spark_python_task, you'll need the __main__ block to start the code execution
 if __name__ == '__main__':
     entrypoint()
+
+print('test')
