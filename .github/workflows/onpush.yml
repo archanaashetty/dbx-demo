@@ -34,8 +34,7 @@ jobs:
 
       - name: Install dependencies and project in dev mode
         run: |
-          pip install -r unit-requirements.txt
-          pip install -e .
+          pip install -e ".[local,test]"
 
       - name: Run unit tests
         run: |
