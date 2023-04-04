@@ -24,5 +24,9 @@
                 "artifact_location": "dbfs:/Shared/cicd_demo/prod/dbx/projects/cicd_demos_dbx_prod"
             }
         }
-    }
+    },
+    
+    "inplace_jinja_support": false,
+    "failsafe_cluster_reuse_with_assets": true,
+    "context_based_upload_for_execute": false
 }
