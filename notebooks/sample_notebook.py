@@ -27,4 +27,4 @@ from cicd_demo_project.tasks.sample_ml_task import SampleMLTask
 pipeline = SampleMLTask.get_pipeline()
 print(pipeline)
 
-print('hello world')
+print('hello world again')
