@@ -1,12 +1,12 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC
+# MAGIC 
 # MAGIC # Sample notebook
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC
+# MAGIC 
 # MAGIC ## Aux steps for auto reloading of dependent files
 
 # COMMAND ----------
@@ -17,7 +17,7 @@
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC
+# MAGIC 
 # MAGIC ## Example usage of existing code
 
 # COMMAND ----------
@@ -26,3 +26,7 @@ from cicd_demo_project.tasks.sample_ml_task import SampleMLTask
 
 pipeline = SampleMLTask.get_pipeline()
 print(pipeline)
+
+# COMMAND ----------
+
+print('hello world')
