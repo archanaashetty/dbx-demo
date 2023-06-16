@@ -29,4 +29,5 @@ print(pipeline)
 
 # COMMAND ----------
 
-print('hello world again')
+print('hello world')
+
