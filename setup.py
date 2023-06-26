@@ -18,6 +18,7 @@ LOCAL_REQUIREMENTS = [
     "scikit-learn",
     "pandas",
     "mlflow",
+    "delta",
 ]
 
 TEST_REQUIREMENTS = [
